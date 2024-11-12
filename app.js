@@ -49,4 +49,3 @@ const start = async () => {
 };
 
 start();
-module.exports = (req, res) => app(req, res);
