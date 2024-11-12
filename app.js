@@ -4,8 +4,8 @@ const auth = require('./middleware/authentication')
 
 const express = require('express');
 const connectDB = require('./db/connect');
-const authRouter = require('./routes/auth')
-const jobsRouter = require('./routes/jobs')
+const authRouter = require('./api/auth')
+const jobsRouter = require('./api/jobs')
 const app = express();
 
 
@@ -49,3 +49,4 @@ const start = async () => {
 };
 
 start();
+module.exports = (req, res) => app(req, res);
